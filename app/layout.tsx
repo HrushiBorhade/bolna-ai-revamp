@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, DM_Sans, Instrument_Serif } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
+import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 
 const dmSans = DM_Sans({subsets:['latin'],variable:'--font-sans'});
@@ -38,6 +39,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           {children}
+          <Analytics />
         </ThemeProvider>
       </body>
     </html>
